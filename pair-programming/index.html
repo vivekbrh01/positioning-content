@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="asstes/stylesheet/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Side-By-Side Positioning Demo</h1>
+        </div>
+    </header>
+    <section class="container">
+        <div class="box red-box align display-1">
+            These two divs are positioned next to one another using <span class="text-hilight">display: inline-block.</span> 
+        </div>
+        <div class="box red-box display-1">Notice the space between them. It occurs because of my carriage return in the HTML which I've used to keep the code organized. I've used a reset to insure no elements should have any default margins or padding. ( I did add a bottom margin to make it easier to read.) This space is actually a space character rendered just as it would be between two inline elements.</div>
+        
+        <section class="clearfix">
+            <div class="box green-box display-2">
+                These two are positioned using <span class="text-hilight">float: left.</span>
+            </div>
+            <div class="box green-box display-2">
+                You can see that, even though the elements are spaced in the code, the space is not actually rendered on the page. This may not be a huge deal in these first examples, but...
+            </div>
+        </section>
+        <div class="box red-box">
+            What if I want my side-by-side elements to take up the full width of the parent element? I can set the width of each to 50%, right?
+        </div>
+        <div class="box red-box">
+            Wrong! Because, together, the two inline block elements will add up to 100% of the available width, but that soden'nt account for the space between.
+        </div>
+        <section class="clearfix">
+            <div class="box green-box display-2">
+                If I do the same thing with floated elements...
+            </div>
+            <div class="box green-box display-2">
+                The two elements are side-by-side just as I intended and fill the entire width of the parent (which, in this case, is the same as the width of the viewport.)
+            </div>
+        </section>
+    </section>
+</body>
+</html>
