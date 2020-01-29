@@ -51,7 +51,7 @@ table {
 
 
 
-
+/**** CSS ****/
 *{
     box-sizing: border-box;
 }
@@ -61,6 +61,13 @@ body{
 .container{
     max-width: 800px;
     margin: 0 auto;
+}
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: table;
+}
+.clearfix::after{
+    clear: both;
 }
 .header{
     font-size: 32px;
@@ -99,6 +106,7 @@ big-box{
 }
 .paragraph{
     margin: 20px 0;
+    font-size: 16px;
 }
 .small{
     padding: 0 24px 0 24px;
